@@ -1,0 +1,117 @@
+/* Animação do fundo */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #fbd309; /* Cor inicial (amarelo claro) */
+    }
+    25% {
+        background-color: #ff5733; /* Cor intermediária (vermelho laranja) */
+    }
+    50% {
+        background-color: #ffcc00; /* Cor intermediária (amarelo dourado) */
+    }
+    75% {
+        background-color: #ffeb3b; /* Cor intermediária (amarelo suave) */
+    }
+    100% {
+        background-color: #fbd309; /* Cor final (amarelo claro) */
+    }
+}
+
+/* Estilo para o body */
+body {
+    background-color: #fbd309; /* Cor inicial */
+    color: #000000; /* Cor do texto */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Garantir que o body ocupe toda a altura da janela */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    animation: backgroundAnimation 8s ease-in-out infinite; /* Animação do fundo */
+}
+
+/* Animação de brilho no título */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+        color: #ffcc00;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff5733, 0 0 20px #ff5733, 0 0 30px #ff5733;
+        color: #ff5733;
+    }
+    100% {
+        text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+        color: #ffcc00;
+    }
+}
+
+/* Título da página */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    animation: glowEffect 1.5s ease-in-out infinite alternate; /* Efeito de brilho no título */
+}
+
+/* Caixa de login */
+.login-box {
+    background: rgba(212, 248, 148); /* Fundo semi-transparente para melhor contraste com o fundo */
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px; /* Largura fixa */
+    text-align: left; /* Alinha o conteúdo à esquerda dentro da caixa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destacar a caixa */
+    margin: 0 auto; /* Garante que a caixa de login esteja centralizada */
+}
+
+/* Estilo para labels */
+.login-box label {
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo para inputs */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Estilo para o botão de login */
+.login-box button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.login-box button:hover {
+    background-color: #ff9900;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+    }
+}
